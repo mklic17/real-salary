@@ -1,0 +1,22 @@
+{
+  "name": "real-salary",
+  "version": "0.1.0",
+  "description": "A way to check your salary across different locations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mklic17/real-salary.git"
+  },
+  "keywords": [
+    "salary"
+  ],
+  "author": "Mitchell Klich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mklic17/real-salary/issues"
+  },
+  "homepage": "https://github.com/mklic17/real-salary#readme"
+}

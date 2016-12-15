@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="mainModule">
+  <head>
+    <meta charset="utf-8">
+    <title>Real Salary</title>
+    <link rel="stylesheet" href="content/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+  </head>
+  <body ng-controller="MainController">
+
+  <div class="nav">
+    <h2>Real Salary</h2>
+  </div>
+  <br><br>
+
+  <center>
+    <form class="input">
+      <br>
+      <label for="salary">Salary:</label>
+      <input type="number" name="salary" placeholder="30,000" ng-model="salary">
+      <br><br>
+      <!-- <label for="state">State:</label>
+      <input type="text" name="state" placeholder="Illinois" ng-model="state">
+      <br><br>
+      <label for="city">City:</label>
+      <input type="text" name="city" placeholder="Chicago" ng-model="city">
+      <br><br> -->
+      <label for="zipCode">Zip Code:</label>
+      <input type="number" name="zipCode" placeholder="60707" ng-model="zipCode">
+      <br><br>
+      <button name="button" ng-click="doThings()">Check</button>
+      <br><br>
+    </form>
+  </center>
+
+
+  <script src="mainApp.js"></script>
+  <script src="const.js"></script>
+
+
+  </body>
+</html>
