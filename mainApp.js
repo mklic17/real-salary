@@ -8,26 +8,29 @@
   function MainController($scope, $http, API_KEY) {
 
     $scope.doThings = function(){
-
-      var sal = $scope.salary;
-      var state = $scope.state;
-      var city = $scope.city
+      var sal = Number($scope.salary);
       var zipCode = $scope.zipCode;
       var arr = [];
-      // debugger
+
       $http.get(`https://taxrates.api.avalara.com:443/postal?country=usa&postal=${zipCode}&apikey=${API_KEY}`)
       .then(function(res) {
         var rates = res.data.rates;
-        console.log(rates);
-        debugger
         for (var i = 0; i < rates.length; i+=1){
           arr.push(rates[i].rate)
         }
-        console.log(arr);
+        var x = sal
+        for(var i = 0; i < arr.length; i+=1) {
+          var temp = (arr[i] * .01) * sal;
+          x -= temp;
+        }
+        console.log(x);
+      },
 
-      })
-
+      function(err) {
+        console.log('Something went Wrong');
+      });
     }
+
 
   }
 
